@@ -1,0 +1,171 @@
+@import "fonts"
+
+*, *::before, *::after
+	box-sizing: border-box
+	outline: none !important
+
+ul[class], ol[class]
+	padding: 0
+	list-style: none
+
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd
+	margin: 0
+
+a:not([class])
+	text-decoration-skip-ink: auto
+
+input, button, textarea, select
+	font: inherit
+
+html, body
+	height: 100%
+
+h1, h2, h3, h4, h5, h6, p
+	margin: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: normal
+	font-family: "Montserrat", sans-serif
+	color: #000
+
+.img
+	display: block
+	max-width: 100%
+	height: auto
+
+.container
+	width: 1140px
+	max-width: 100%
+	margin: 0 auto
+
+.header
+	background-color: #E9E9E9
+	&-wrapper
+		display: flex
+		align-items: center
+		padding: 18px 0
+	&-logo
+		max-width: 84px
+		max-height: 64px
+		margin: 0 105px 0 0
+		&__link
+			display: inline-block
+			text-decoration: none
+	&-nav
+		flex-grow: 1
+		ul
+			display: flex
+			align-items: center
+			margin: 0
+			padding: 0
+			list-style: none
+			li
+				a
+					text-decoration: none
+					font-size: 16px
+					line-height: 20px
+					font-weight: bold
+					color: #000
+					transition: all 0.3s ease
+					&:hover
+						color: darken(#FAE05E, 30%)
+				&:not(:last-child)
+					margin: 0 65px 0 0
+
+	&-info
+		min-width: 270px
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&-social
+		&__link
+			display: inline-block
+			&:not(:last-child)
+				margin: 0 17px 0 0
+
+	&-contacts
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+	&-phone
+		font-weight: bold
+		font-size: 16px
+		line-height: 20px
+		text-decoration: none
+		color: inherit
+		transition: all 0.3s ease
+		&:hover
+			color: darken(#FAE05E, 30%)
+	&-city
+		font-weight: normal
+		font-size: 12px
+		line-height: 15px
+		text-decoration: none
+		color: inherit
+		transition: all 0.3s ease
+		&:hover
+			color: darken(#FAE05E, 30%)
+
+.main
+	padding: 60px 0
+	background-color: #E9E9E9
+	&-wrapper
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+	&-info
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			background-image: url('../img/main-puzzle.svg')
+			background-repeat: no-repeat
+			width: 100px
+			height: 100px
+			left: 25px
+			top: 100px
+			transform: translateY(-50%)
+	&-title
+		font-weight: bold
+		font-size: 48px
+		line-height: 59px
+		margin: 0 0 20px 0
+		position: relative
+	&-subtitle
+		font-weight: bold
+		font-size: 30px
+		line-height: 37px
+		margin: 0 0 85px 0
+		position: relative
+
+	&-button
+		min-width: 257px
+		height: 68px
+		padding: 0
+		font-weight: bold
+		font-size: 20px
+		line-height: 24px
+		background-color: #FAE05E
+		border: none
+		cursor: pointer
+		transition: all 0.3s ease
+		&:hover
+			background-color: darken(#FAE05E, 25%)
+
+	&-content
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	&-image
+		margin: 0 0 12px 0
+	&-description
+		font-weight: normal
+		font-size: 20px
+		line-height: 24px
+
+@import "media"
