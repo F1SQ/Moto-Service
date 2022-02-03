@@ -153,6 +153,16 @@ body {
   margin: 0 17px 0 0;
 }
 
+.header-social__icon {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  fill: #000;
+}
+
+.header-social__icon:hover {
+  fill: #b99b06;
+}
+
 .header-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,6 +296,91 @@ body {
   font-weight: normal;
   font-size: 20px;
   line-height: 24px;
+}
+
+.video-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.video-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 550px;
+  height: 370px;
+  margin: -120px 0 0 0;
+  background: rgba(255, 99, 71, 0.5);
+}
+
+.video-block a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 0 0 0 6px;
+}
+
+.video-info {
+  position: relative;
+  padding: 0 0 130px 0;
+}
+
+.video-info::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/video-block__puzzle.svg");
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 115px;
+  left: 85px;
+  top: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.video-info::after {
+  content: '';
+  position: absolute;
+  background-image: url("../img/video-block__arrow.png");
+  background-repeat: no-repeat;
+  width: 125px;
+  height: 125px;
+  left: -150px;
+  top: 60px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.video-title {
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-indent: -8px;
 }
 
 @media (max-width: 1200px) {

@@ -41,6 +41,8 @@ body
 	max-width: 100%
 	margin: 0 auto
 
+// Header ///////////////////////////////////////////////////////////////////////////////////////////////////
+
 .header
 	background-color: #E9E9E9
 	&-wrapper
@@ -85,6 +87,11 @@ body
 			display: inline-block
 			&:not(:last-child)
 				margin: 0 17px 0 0
+		&__icon
+			transition: all 0.3s ease
+			fill: #000
+			&:hover
+				fill: darken(#FAE05E, 30%)
 
 	&-contacts
 		display: flex
@@ -109,6 +116,8 @@ body
 		transition: all 0.3s ease
 		&:hover
 			color: darken(#FAE05E, 30%)
+
+// Section main ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 .main
 	padding: 60px 0
@@ -167,5 +176,65 @@ body
 		font-weight: normal
 		font-size: 20px
 		line-height: 24px
+
+// Section video ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+.video
+
+	&-wrapper
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+
+	&-block
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 550px
+		height: 370px
+		margin: -120px 0 0 0
+		background: rgba(tomato, 0.5)
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 70px
+			height: 70px
+			border: 2px solid #fff
+			border-radius: 50%
+			padding: 0 0 0 6px
+
+	&-info
+		position: relative
+		padding: 0 0 130px 0
+		&::before
+			content: ''
+			position: absolute
+			background-image: url('../img/video-block__puzzle.svg')
+			background-repeat: no-repeat
+			width: 115px
+			height: 115px
+			left: 85px
+			top: 30px
+			transform: translateY(-50%)
+		&::after
+			content: ''
+			position: absolute
+			background-image: url('../img/video-block__arrow.png')
+			background-repeat: no-repeat
+			width: 125px
+			height: 125px
+			left: -150px
+			top: 60px
+			transform: translateY(-50%)
+	&-title
+		position: relative
+		font-style: normal
+		font-weight: bold
+		font-size: 24px
+		line-height: 29px
+		text-indent: -8px
+
+// media ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 @import "media"
