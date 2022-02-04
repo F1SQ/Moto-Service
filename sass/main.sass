@@ -293,11 +293,10 @@ body
 			right: 0
 			bottom: 0
 			z-index: -1
-			img
-				width: 100%
-				height: 100%
-				object-fit: cover
-				object-position: top
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: top
 
 		&__hidden-text
 			position: absolute
@@ -328,7 +327,7 @@ body
 
 		&__icon
 			width: 30px
-			margin: 0 30px 0 0
+			margin: 0 20px 0 0
 		&__title
 			font-weight: bold
 			font-size: 24px
@@ -349,6 +348,114 @@ body
 			transition: all 0.3s ease
 			&:hover
 				background: darken(#FAE05E, 25%)
+
+// price ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+.price
+	position: relative
+	padding: 59px 0 66px 0
+	// &-bg
+	// 	position: absolute
+	// 	width: 100%
+	// 	height: 100%
+	// 	left: 0
+	// 	top: 0
+	// 	right: 0
+	// 	bottom: 0
+	background-image: url('../img/price-bg.webp')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(0, 0, 0, 0.83)
+		backdrop-filter: blur(17px)
+	&-wrapper
+		position: relative
+
+	&-title
+		font-weight: bold
+		font-size: 36px
+		line-height: 44px
+		color: #fff
+		text-align: center
+	&-list
+
+	&-item
+		ul
+			display: none
+			margin: 0
+			padding: 0
+			list-style: none
+			li
+				display: flex
+				align-items: center
+				justify-content: space-between
+				width: 100%
+				min-height: 53px
+				font-size: 14px
+				font-weight: 500
+				line-height: 17px
+				color: #FFFFFF
+				padding: 0 65px 0 46px
+				&:nth-child(odd)
+					background: #2F2F2F
+
+	&-name
+		display: flex
+		align-items: center
+		position: relative
+		width: 100%
+		height: 90px
+		font-weight: 500
+		font-size: 24px
+		line-height: 29px
+		color: #FAE05E
+		cursor: pointer
+		border-bottom: 2px solid #2F2F2F
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+			width: 24px
+			height: 2px
+			background-color: #FAE05E
+			transition: all 0.2s ease
+		&::after
+			transform: rotate(90deg)
+			opacity: 1
+
+	&-table
+		display: none
+		align-items: center
+		justify-content: space-between
+		padding: 0 65px 0 46px
+		height: 65px
+		font-weight: 500
+		font-size: 14px
+		line-height: 17px
+		color: #C4C4C4
+.price
+	&-item_visible
+		ul
+			display: block
+.price
+	&-name_active
+		&::after
+			opacity: 0
+.price
+	&-table_visible
+		display: flex
+
 // media ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 @import "media"
