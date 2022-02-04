@@ -394,6 +394,8 @@ body
 			margin: 0
 			padding: 0
 			list-style: none
+			transition: all 0.4s linear
+
 			li
 				display: flex
 				align-items: center
@@ -407,7 +409,17 @@ body
 				padding: 0 65px 0 46px
 				&:nth-child(odd)
 					background: #2F2F2F
-
+		&__table
+			display: none
+			// display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 0 65px 0 46px
+			height: 65px
+			font-weight: 500
+			font-size: 14px
+			line-height: 17px
+			color: #C4C4C4
 	&-name
 		display: flex
 		align-items: center
@@ -434,27 +446,16 @@ body
 			transform: rotate(90deg)
 			opacity: 1
 
-	&-table
-		display: none
-		align-items: center
-		justify-content: space-between
-		padding: 0 65px 0 46px
-		height: 65px
-		font-weight: 500
-		font-size: 14px
-		line-height: 17px
-		color: #C4C4C4
 .price
 	&-item_visible
 		ul
 			display: block
+		.price-item__table
+			display: flex
 .price
 	&-name_active
 		&::after
 			opacity: 0
-.price
-	&-table_visible
-		display: flex
 
 // media ///////////////////////////////////////////////////////////////////////////////////////////////////
 
