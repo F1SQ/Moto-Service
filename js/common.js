@@ -45,10 +45,10 @@ $(function() {
 
 
     $('.price-item').first().click();
-    $('.price-item').click(function() {
+    $('.price-name').click(function() {
         $(this).parent().toggleClass('price-item_visible');
         $(this).toggleClass('price-name_active');
-        $(this).next().slideToggle();
+        $(this).next().slideToggle('price-item__wrapper_active');
         $(this).next().next().slideToggle();
     });
 

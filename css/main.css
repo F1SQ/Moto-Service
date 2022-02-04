@@ -627,8 +627,11 @@ body {
   text-align: center;
 }
 
-.price-item ul {
+.price-item__wrapper {
   display: none;
+}
+
+.price-item ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -660,7 +663,9 @@ body {
 }
 
 .price-item__table {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -713,10 +718,8 @@ body {
   opacity: 1;
 }
 
-.price-item_visible .price-item__table {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.price-item_visible ul {
+  display: block;
 }
 
 .price-name_active::after {
