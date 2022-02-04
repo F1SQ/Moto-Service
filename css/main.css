@@ -317,16 +317,52 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 550px;
   height: 370px;
   margin: -120px 0 0 0;
-  background: rgba(255, 99, 71, 0.5);
+  background-image: url("../img/video-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .video-block a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.video-block a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.video-block a:hover::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.video-block a span {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,17 +444,12 @@ body {
 }
 
 .services-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 120px;
+  grid-row-gap: 40px;
 }
 
 .services-item {
@@ -433,10 +464,6 @@ body {
   min-height: 440px;
   color: #fff;
   cursor: pointer;
-}
-
-.services-item:not(:last-child) {
-  margin: 0 129px 0 0;
 }
 
 .services-item:hover .services-item__hidden-text {
@@ -684,10 +711,6 @@ body {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   opacity: 1;
-}
-
-.price-item_visible ul {
-  display: block;
 }
 
 .price-item_visible .price-item__table {

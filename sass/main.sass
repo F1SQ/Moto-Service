@@ -189,20 +189,47 @@ body
 	&-block
 		display: flex
 		align-items: center
-		justify-content: center
+		justify-content: flex-start
 		width: 550px
 		height: 370px
 		margin: -120px 0 0 0
-		background: rgba(tomato, 0.5)
+		background-image: url('../img/video-img.jpg')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+
 		a
+			position: relative
 			display: flex
 			align-items: center
 			justify-content: center
-			width: 70px
-			height: 70px
-			border: 2px solid #fff
-			border-radius: 50%
-			padding: 0 0 0 6px
+			width: 100%
+			height: 100%
+			// transition: all 0.3s ease
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				transition: all 0.4s linear
+				// background-color: transparent
+			&:hover
+				&::before
+					background-color: rgba(0, 0, 0, 0.3)
+			span
+				position: relative
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 70px
+				height: 70px
+				border: 2px solid #fff
+				border-radius: 50%
+				padding: 0 0 0 6px
 
 	&-info
 		position: relative
@@ -250,10 +277,14 @@ body
 		line-height: 44px
 		margin: 0 0 58px 0
 	&-content
-		display: flex
-		align-items: flex-start
-		justify-content: flex-start
-		flex-wrap: wrap
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-column-gap: 120px
+		grid-row-gap: 40px
+		// display: flex
+		// align-items: flex-start
+		// justify-content: flex-start
+		// flex-wrap: wrap
 	&-item
 		display: flex
 		flex-direction: column
@@ -262,7 +293,7 @@ body
 		color: #fff
 		cursor: pointer
 		&:not(:last-child)
-			margin: 0 129px 0 0
+			// margin: 0 129px 0 0
 		&:hover	&__hidden-text
 			top: 0
 			opacity: 1
@@ -449,9 +480,9 @@ body
 .price
 	&-item_visible
 		ul
-			display: block
+			// display: block
 		.price-item__table
-			display: flex
+			// display: flex
 .price
 	&-name_active
 		&::after
