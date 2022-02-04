@@ -53,7 +53,31 @@ $(function() {
     });
 
 
+
+	const clientsSlider = new Swiper('.clients-swiper', {
+
+  loop: true,
+	speed: 700,
+	grabCursor: true,
+	observer: true,
+
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.clients-button-next',
+    prevEl: '.clients-button-prev',
+  },
+	keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+	},
+
 });
+
+
+});
+
+
 
 
 });

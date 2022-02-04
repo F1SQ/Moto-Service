@@ -726,6 +726,225 @@ body {
   opacity: 0;
 }
 
+.clients {
+  padding: 107px 0 114px 0;
+}
+
+.clients-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.clients-info {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.clients-info__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 222px;
+  height: 45px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  background-color: #FAE05E;
+  color: #000;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.clients-info__button:hover {
+  background-color: #d2b007;
+}
+
+.clients-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  margin: 0 0 21px 0;
+}
+
+.clients-subtitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 30px 0;
+}
+
+.clients-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.clients-tabs {
+  width: 20px;
+  margin: 0 5px 0 0;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.clients-tabs-button {
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #000;
+}
+
+.clients-tabs-button:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+
+.clients-tabs-button:not(:last-child)::after {
+  content: '/';
+  position: absolute;
+  color: #000;
+  left: 0;
+  bottom: -10px;
+}
+
+.clients-tabs-button_active {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.clients-swiper {
+  position: relative;
+}
+
+.clients-item {
+  background: #E9E9E9;
+  padding: 55px 67px 55px 82px;
+}
+
+.clients-item__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.clients-item__wrapper picture {
+  margin: 0 25px 0 0;
+}
+
+.clients-item__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 0 0 0;
+  height: 100%;
+}
+
+.clients-item__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.clients-item__message {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.clients-item__link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #000;
+}
+
+.clients-button-prev, .clients-button-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 33px;
+  height: 33px;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.clients-button-prev svg, .clients-button-next svg {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  fill: black;
+}
+
+.clients-button-prev:hover svg, .clients-button-next:hover svg {
+  fill: #d2b007;
+}
+
+.clients-button-prev {
+  right: 33px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.clients-button-next {
+  right: 0;
+}
+
+.swiper {
+  width: 652px;
+  height: 369px;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 960px;

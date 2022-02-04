@@ -124,7 +124,7 @@
 					<div class="services-item">
 						<div class="services-item__info">
 							<picture>
-								<source src="img/services-selection.webp" class="services-item__bg" type="image/webp">
+								<source srcset="img/services-selection.webp" class="services-item__bg" type="image/webp">
 								<img src="img/services-selection.jpg" class="services-item__bg" loading="lazy" alt="image: selection">
 							</picture>
 							<div class="services-item__hidden-text">
@@ -152,7 +152,7 @@
 					<div class="services-item">
 						<div class="services-item__info">
 							<picture>
-								<source src="img/services-motoservice.webp" class="services-item__bg" type="image/webp">
+								<source srcset="img/services-motoservice.webp" class="services-item__bg" type="image/webp">
 								<img src="img/services-motoservice.jpg" class="services-item__bg" loading="lazy" alt="image: motoservice">
 							</picture>
 							<div class="services-item__hidden-text">
@@ -179,7 +179,7 @@
 					<div class="services-item">
 						<div class="services-item__info">
 							<picture>
-								<source src="img/services-evacuation.webp" class="services-item__bg" type="image/webp">
+								<source srcset="img/services-evacuation.webp" class="services-item__bg" type="image/webp">
 								<img src="img/services-evacuation.jpg" class="services-item__bg" loading="lazy" alt="image: evacuation">
 							</picture>
 							
@@ -212,13 +212,6 @@
 	</section>
 
 	<section class="price">
-		<!-- <div class="price-bg"> -->
-			<!-- <picture>
-				<source src="img/price-bg.webp" class="price-bg" type="image/webp">
-				<img src="img/price-bg.jpg" class="price-bg" alt="image: price-background" loading="lazy">
-			</picture>			 -->
-		<!-- </div> -->
-		<!-- /.price-bg -->
 		<div class="container">
 			<div class="price-wrapper">
 				<h2 class="price-title">Наши цены</h2>
@@ -296,8 +289,64 @@
 				<div class="clients-info">
 					<h2 class="clients-title">Сотни довольных <br> клиентов</h2>
 					<h4 class="clients-subtitle">У каждого своя история!</h4>
+					<a href="#" class="clients-info__button">Смотреть все отзывы</a>
 				</div>
 				<!-- /.clients-info -->
+
+				<div class="clients-content">
+					<div class="clients-tabs">
+						<a href="#" class="clients-tabs-button clients-tabs-button_active">Сообщения</a>
+						<a href="#" class="clients-tabs-button">Видео</a>
+					</div>
+					<!-- /.clients-tabs -->
+					<div class="swiper clients-swiper">
+						
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide clients-item">
+								<div class="clients-item__wrapper">
+									<picture>
+										<source srcset="img/clients-card-img.webp" type="image/webp">
+										<img src="img/clients-card-img.jpg" alt="image: client" loading="lazy">
+									</picture>
+									<div class="clients-item__text">
+										<h5 class="clients-item__title">Саня Шавырин</h5>
+										<p class="clients-item__message">Заказывал Ветровик, как и обещали, в очень хорошем состоянии, упаковали хорошо, доехал в целости,отправили в обещанный срок, короче, я доволен, еще раз спасибо)</p>
+										<a href="#" class="clients-item__link">В контакте</a>
+									</div>
+									<!-- clients-item__text -->
+								</div>
+								<!-- /.clients-item__wrapper -->
+							</div>
+							<div class="swiper-slide clients-item">Slide 2</div>
+							<div class="swiper-slide clients-item">Slide 3</div>						
+						</div>
+						<!-- /.swiper-wrapper -->
+					
+					
+						<!-- If we need navigation buttons -->
+						<div class="clients-button-prev">
+							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0.183201 1.2516L6.88345 7.88963L7.55709 7.20968L0.856838 0.571645L0.183201 1.2516ZM0.856838 13.9947L7.55709 7.35671L6.88345 6.67676L0.183201 13.3148L0.856838 13.9947Z"
+									/>
+							</svg>
+						</div>
+						<div class="clients-button-next">
+							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0.183201 1.2516L6.88345 7.88963L7.55709 7.20968L0.856838 0.571645L0.183201 1.2516ZM0.856838 13.9947L7.55709 7.35671L6.88345 6.67676L0.183201 13.3148L0.856838 13.9947Z"
+									/>
+							</svg>
+						</div>
+					
+						
+					</div>
+					<!-- swiper clients-swiper -->
+				</div>
+
+				<!-- /.clients-content -->
+
 			</div>
 			<!-- /.clients-wrapper -->
 		</div>
