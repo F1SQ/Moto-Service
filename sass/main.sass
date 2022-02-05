@@ -44,11 +44,27 @@ body
 // Header ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 .header
+	position: fixed
+	width: 100%
 	background-color: #E9E9E9
+	transition: all 0.3s linear
 	&-wrapper
+		position: relative
 		display: flex
 		align-items: center
-		padding: 18px 0
+		justify-content: space-between
+		padding: 10px 0
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: -100%
+			right: 0
+			background-color: #f7f7f7
+			transition: all 0.1s linear
+			z-index: 0
 	&-logo
 		max-width: 84px
 		max-height: 64px
@@ -57,7 +73,7 @@ body
 			display: inline-block
 			text-decoration: none
 	&-nav
-		flex-grow: 1
+		// flex-grow: 1
 		ul
 			display: flex
 			align-items: center
@@ -85,18 +101,21 @@ body
 	&-social
 		&__link
 			display: inline-block
+			svg
+				transition: all 0.3s ease
+				fill: #000
+			&:hover
+				svg
+					fill: darken(#FAE05E, 30%)
 			&:not(:last-child)
 				margin: 0 17px 0 0
 		&__icon
 			transition: all 0.3s ease
-			fill: #000
-			&:hover
-				fill: darken(#FAE05E, 30%)
 
 	&-contacts
 		display: flex
 		flex-direction: column
-		align-items: flex-start
+		align-items: center
 
 	&-phone
 		font-weight: bold
@@ -109,7 +128,7 @@ body
 			color: darken(#FAE05E, 30%)
 	&-city
 		font-weight: normal
-		font-size: 12px
+		font-size: 14px
 		line-height: 15px
 		text-decoration: none
 		color: inherit
@@ -117,50 +136,49 @@ body
 		&:hover
 			color: darken(#FAE05E, 30%)
 
+	&_scroll
+		background-color: #fff
+		left: 0
+		top: 0
+		right: 0
+
+		z-index: 99
+
 // main ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 .main
-	padding: 60px 0
+	padding: 144px 0
 	background-color: #E9E9E9
 	&-wrapper
 		display: flex
 		align-items: flex-start
 		justify-content: space-between
 	&-info
-		position: relative
-		&::before
-			content: ''
-			position: absolute
-			background-image: url('../img/main-puzzle.svg')
-			background-repeat: no-repeat
-			width: 100px
-			height: 100px
-			left: 25px
-			top: 100px
-			transform: translateY(-50%)
+
 	&-title
 		font-weight: bold
-		font-size: 48px
+		font-size: 44px
 		line-height: 59px
 		margin: 0 0 20px 0
 		position: relative
 	&-subtitle
 		font-weight: bold
-		font-size: 30px
+		font-size: 28px
 		line-height: 37px
 		margin: 0 0 85px 0
 		position: relative
 
 	&-button
-		min-width: 257px
-		height: 68px
+		min-width: 229px
+		height: 47px
 		padding: 0
 		font-weight: bold
-		font-size: 20px
-		line-height: 24px
+		font-size: 16px
+		line-height: 20px
 		background-color: #FAE05E
 		border: none
 		cursor: pointer
+		text-transform: uppercase
 		transition: all 0.3s ease
 		&:hover
 			background-color: darken(#FAE05E, 25%)
@@ -173,9 +191,24 @@ body
 	&-image
 		margin: 0 0 12px 0
 	&-description
+		position: relative
 		font-weight: normal
-		font-size: 20px
-		line-height: 24px
+		font-size: 18px
+		line-height: 22px
+		color: #000
+		span
+			position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: -19px
+			top: -18px
+			width: 76px
+			height: 76px
+			background-image: url('../img/main-description-puzzle.svg')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
 
 // video ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -183,8 +216,9 @@ body
 
 	&-wrapper
 		display: flex
-		align-items: flex-end
-		justify-content: space-between
+		align-items: center
+		justify-content: flex-start
+		column-gap: 120px
 
 	&-block
 		display: flex
@@ -233,7 +267,7 @@ body
 
 	&-info
 		position: relative
-		padding: 0 0 130px 0
+		// padding: 0 0 130px 0
 		&::before
 			content: ''
 			position: absolute
@@ -251,7 +285,7 @@ body
 			background-repeat: no-repeat
 			width: 125px
 			height: 125px
-			left: -150px
+			left: -140px
 			top: 60px
 			transform: translateY(-50%)
 	&-title
@@ -279,7 +313,7 @@ body
 	&-content
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
-		grid-column-gap: 120px
+		grid-column-gap: 170px
 		grid-row-gap: 40px
 		// display: flex
 		// align-items: flex-start
@@ -288,16 +322,23 @@ body
 	&-item
 		display: flex
 		flex-direction: column
-		width: 294px
-		min-height: 440px
+		width: 263px
+		min-height: 430px
 		color: #fff
 		cursor: pointer
-		&:not(:last-child)
-			// margin: 0 129px 0 0
-		&:hover	&__hidden-text
-			top: 0
-			opacity: 1
-			filter: blur(0)
+		background-color: transparent
+		perspective: 1000px
+		&:nth-child(3)
+			.services-item__info
+				padding: 23px 12px
+			.services-item__icon
+				width: 50px
+				margin: 0 10px 0 0
+		// &:hover .services-item__info
+			// transform: rotateY(180deg)
+			// top: 0
+			// opacity: 1
+			// filter: blur(0)
 		&__info
 			position: relative
 			display: flex
@@ -305,8 +346,16 @@ body
 			justify-content: flex-start
 			width: 100%
 			min-height: 383px
-			padding: 20px 22px
+			// padding: 23px 37px
+			padding: 23px 16px 5px 21px
 			overflow: hidden
+			transition: transform 0.8s
+			transform-style: preserve-3d
+			// &:hover	.services-item__hidden-text
+				// top: 0
+				// opacity: 1
+				// filter: blur(0)
+
 			&::before
 				content: ''
 				position: absolute
@@ -331,7 +380,7 @@ body
 
 		&__hidden-text
 			position: absolute
-			top: -30%
+			top: 0
 			left: 0
 			right: 0
 			width: 100%
@@ -341,7 +390,7 @@ body
 			opacity: 0
 			filter: blur(10px)
 			p
-				padding: 80px 23px
+				padding: 70px 16px 5px 21px
 				font-weight: normal
 				font-size: 14px
 				line-height: 17px
@@ -353,32 +402,55 @@ body
 			position: relative
 			display: flex
 			align-items: center
-			justify-content: flex-start
+			justify-content: center
 			width: 100%
 
 		&__icon
 			width: 30px
-			margin: 0 20px 0 0
+			margin: 0 10px 0 0
 		&__title
 			font-weight: bold
-			font-size: 24px
+			font-size: 20px
 			line-height: 29px
+
 		&__button
 			display: flex
 			align-items: center
 			justify-content: center
 			width: 100%
 			min-height: 57px
-			font-weight: 500
-			font-size: 20px
-			line-height: 24px
+			font-weight: bold
+			font-size: 14px
+			line-height: 17px
 			background: #FAE05E
 			border: none
+			text-transform: uppercase
 			text-decoration: none
 			color: #000
 			transition: all 0.3s ease
 			&:hover
 				background: darken(#FAE05E, 25%)
+
+.services-item--front, .services-item--back
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	padding: 23px 16px 5px 21px
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+
+.services-item--back
+	transform: rotateY(180deg)
+
+.services-item__info_active
+	transform: rotateY(180deg)
+	.services-item__hidden-text
+		opacity: 1
+		filter: blur(0)
+.services-item__button_active
+	// background-color: #fff
 
 // price ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -498,18 +570,22 @@ body
 		align-items: center
 		justify-content: space-between
 	&-info
-		flex-shrink: 0
-		flex-grow: 1
+		padding: 0 25px 0 0
+		// flex-shrink: 0
+		// flex-grow: 1
+
 		&__button
 			display: inline-flex
 			align-items: center
 			justify-content: center
-			min-width: 222px
-			height: 45px
-			font-style: normal
-			font-weight: 500
+			text-align: center
+			min-width: 290px
+			min-height: 47px
+			padding: 15px 30px
+			font-weight: bold
 			font-size: 14px
 			line-height: 17px
+			text-transform: uppercase
 			text-decoration: none
 			background-color: #FAE05E
 			color: #000
@@ -531,35 +607,7 @@ body
 
 	&-content
 		display: flex
-		align-items: flex-end
-	&-tabs
-		width: 20px
-		// height: 100%
-		margin: 0 5px 0 0
-		writing-mode: vertical-rl
-		transform: rotate(-180deg)
-		&-button
-			position: relative
-			font-style: normal
-			font-weight: normal
-			font-size: 14px
-			line-height: 17px
-			text-decoration: none
-			color: #000
-
-			&:not(:last-child)
-				margin: 0 0 10px 0
-				&::after
-					content: '/'
-					position: absolute
-					color: #000
-					left: 0
-					bottom: -10px
-			&_active
-				font-style: normal
-				font-weight: bold
-				font-size: 14px
-				line-height: 17px
+		// align-items: flex-end	
 	&-swiper
 		position: relative
 	&-item
@@ -567,7 +615,7 @@ body
 		padding: 55px 67px 55px 82px
 		&__wrapper
 			display: flex
-			align-items: center
+			align-items: flex-start
 			height: 100%
 			picture
 				margin: 0 25px 0 0
@@ -575,25 +623,18 @@ body
 		&__text
 			display: flex
 			flex-direction: column
-			justify-content: space-between
-			padding: 15px 0 0 0
-			height: 100%
+			justify-content: flex-start
+			min-height: 100%
 		&__title
 			font-style: normal
 			font-weight: 600
 			font-size: 16px
 			line-height: 20px
-			// margin: 0 0 30px 0
+			margin: 0 0 30px 0
 		&__message
 			font-weight: normal
 			font-size: 16px
 			line-height: 24px
-		&__link
-			font-weight: normal
-			font-size: 16px
-			line-height: 20px
-			text-decoration-line: underline
-			color: #000
 
 .clients-button
 	&-prev, &-next
@@ -606,7 +647,6 @@ body
 		height: 33px
 		background-color: #fff
 		cursor: pointer
-
 		z-index: 1
 		svg
 			transition: all 0.3s linear
@@ -622,11 +662,110 @@ body
 		right: 0
 .swiper
 	width: 652px
-	height: 369px
+	// height: 369px
 
 	&-wrapper
 
 	&-slide
+		// min-height: 369px
+
+// media ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+.form
+	position: relative
+	&-bg
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.74)
+		backdrop-filter: blur(4px)
+
+		&__layer
+			position: absolute
+			width: 63%
+			height: 100%
+			top: 0
+			right: 0
+			bottom: 0
+			background-image: url('../img/form-bg.webp')
+			background-repeat: no-repeat
+			background-size: cover
+	&-wrapper
+		position: relative
+		color: #fff
+	&-block
+
+.block
+	&-form
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 100px 0 120px 0
+	&-image
+		margin: 0 60px 0 -100px
+	&__info
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		form
+			width: 100%
+			display: flex
+			flex-direction: column
+
+	&-title
+		font-weight: bold
+		font-size: 36px
+		line-height: 44px
+		margin: 0 0 35px 0
+		&--modified
+			color: #fae05e
+	&-item
+		width: 100%
+		&__user, &__phone
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			border-bottom: 1px solid #FFFBFB
+			img
+				width: 17px
+				height: 17px
+		&__user
+			margin: 0 0 20px 0
+		&__phone
+			margin: 0 0 30px 0
+	&-input
+		width: 100%
+		padding: 5px 10px
+		border: none
+		background-color: transparent
+		color: #fff
+		outline: none
+		&::placeholder
+			color: #949494
+		img
+			width: 16px
+			height: 16px
+
+	&-button
+		width: 208px
+		min-height: 47px
+		text-transform: uppercase
+		cursor: pointer
+		border: none
+		background-color: #fae05e
+		padding: 15px 30px
+		font-weight: bold
+		font-size: 14px
+		line-height: 17px
+		color: #000
+		transition: all 0.3s ease
+		&:hover
+			background-color: darken(#FAE05E, 25%)
 
 // media ///////////////////////////////////////////////////////////////////////////////////////////////////
 

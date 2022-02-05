@@ -78,6 +78,55 @@ $(function() {
 });
 
 
+const menuLinks = document.querySelectorAll('.header-nav a[data-goto]');
+if (menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header-wrapper').offsetHeight;
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth"
+      });
+      e.preventDefault();
+      return false;
+    }
+  }
+}
+
+	var nav = $('.header');
+ 
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 50) {
+			nav.addClass("header_scroll");
+		}	else {
+			nav.removeClass("header_scroll");
+			
+		}
+	});
+
+ let servicesItem = document.querySelectorAll('services-item__info');
+
+ servicesItem.forEach((item, i) => {
+	item.addEventListener('click', () => {		
+		event.target.classList.toggle('_active');
+
+	});
+ });
+
+    $('.services-item').first().click();
+    $('.services-item__info').click(function() {
+        // $(this).parent().toggleClass();
+        $(this).toggleClass('services-item__info_active');
+        $(this).next().toggleClass('.services-item__button_active');
+        // $(this).next().next().slideToggle();
+    });
 
 
 });
