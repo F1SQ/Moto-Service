@@ -1428,7 +1428,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000d7;
+  background-color: #000000ce;
   z-index: 99;
   visibility: hidden;
   opacity: 0;
@@ -1465,6 +1465,21 @@ body {
 .modal-dialog--visible {
   visibility: visible;
   opacity: 1;
+}
+
+.modal-dialog::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+  z-index: -1;
 }
 
 .modal-close {
