@@ -128,5 +128,37 @@ if (menuLinks.length > 0) {
         // $(this).next().next().slideToggle();
     });
 
+var map = $('.main');
+  var mapTop = map.offset().top;
+  $(window).bind('scroll', function() {
+    var windowTop = $(this).scrollTop();
+    if(windowTop > mapTop) {
+      $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A15c45f9ef9a4c2dd0871c440e90b7c31cd01dbee160b6112871fad9484d95027&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>');
+      $(window).unbind('scroll');
+    }
+  });
 
+
+  var modalButton = $('[data-toggle=modal]');
+  var closeModalButton = $('.modal-close');
+
+    modalButton.on('click', openModal);
+
+    closeModalButton.on('click', closeModal);
+
+  function openModal(event) {
+    event.preventDefault();
+    var modalOverlay = $('.modal-overlay');
+    var modalDialog = $('.modal-dialog');
+    modalOverlay.addClass('modal-overlay--visible');
+    modalDialog.addClass('modal-dialog--visible');
+  }
+
+  function closeModal(event) {
+    event.preventDefault();
+    var modalOverlay = $('.modal-overlay');
+    var modalDialog = $('.modal-dialog');
+    modalOverlay.removeClass('modal-overlay--visible');
+    modalDialog.removeClass('modal-dialog--visible');
+  }
 });

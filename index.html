@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<link rel="stylesheet" href="libs/fancybox/fancybox.css">
+	<link rel="stylesheet" href="libs/aos/aos.css">
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -74,7 +75,7 @@
 				<div class="main-info">
 					<h1 class="main-title">Мотосервис</h1>
 					<h2 class="main-subtitle">А еще мотоподбор и мотоэвакуация</h2>
-					<button class="main-button">Оставить заявку</button>					
+					<button data-toggle="modal" class="main-button">Оставить заявку</button>					
 				</div>
 				<!-- /.main-info -->
 
@@ -131,6 +132,7 @@
 									<div class="services-item__icon">
 										<img src="img/services-puzzle.svg" alt="icon: puzzle">
 									</div>
+
 									<!-- /.services-item__icon -->
 									<h4 class="services-item__title">Мотоподбор</h4>
 								</div>
@@ -150,7 +152,7 @@
 
 						</div>
 						<!-- /.services-item__info -->
-						<a href="#" class="services-item__button">Заказать</a>
+						<a href="#" data-toggle="modal" class="services-item__button">Заказать</a>
 					</div>
 					<!-- /.services-item -->
 
@@ -177,7 +179,7 @@
 							<!-- /.services-item__name -->
 						</div>
 						<!-- /.services-item__info -->
-						<a href="#" class="services-item__button">Заказать</a>
+						<a href="#" data-toggle="modal" class="services-item__button">Заказать</a>
 					</div>
 					<!-- /.services-item -->
 
@@ -205,7 +207,7 @@
 							<!-- /.services-item__name -->
 						</div>
 						<!-- /.services-item__info -->
-						<a href="#" class="services-item__button">Заказать</a>
+						<a href="#" data-toggle="modal" class="services-item__button">Заказать</a>
 					</div>
 					<!-- /.services-item -->
 					
@@ -391,8 +393,177 @@
 		<!-- /.container -->
 	</section>
 
+
+	<div class="partners">			
+		<div class="partners-wrapper">
+			<div class="partners-item">
+				<img src="img/partners-logo-aprilla.jpg" alt="logo: aprilla">
+			</div>
+			<div class="partners-item">
+				<img src="img/partners-logo-bmw.jpg" alt="logo: bmw">
+			</div>
+			<div class="partners-item">
+				<img src="img/partners-logo-triumph.jpg" alt="logo: triumph">
+			</div>
+			<div class="partners-item">
+				<img src="img/partners-logo-honda.jpg" alt="logo: honda">
+			</div>
+			<div class="partners-item">
+				<img src="img/partners-logo-yamaha.jpg" alt="logo: yamaha">
+			</div>
+			<div class="partners-item">
+				<img src="img/parnters-logo-suzuki.jpg" alt="logo: suzuki">
+			</div>
+			<div class="partners-item">
+				<img src="img/parnters-logo-ducati.jpg" alt="logo: ducati">
+			</div>
+		</div>
+		<!-- /.partners-wrapper -->
+	</div>
+	<!-- /.partners -->
+
+	<div class="map">
+		<div class="map-wrapper" id="map">			
+		</div>
+		<!-- /.map-wrapper -->
+		<div class="map_container container">
+			<div class="map-info">
+				<div class="map-item">
+					<img src="img/map-marker.svg" alt="icon: mark">
+					<h5>Петергофское шоссе 75 к 2</h5>
+				</div>
+
+				<div class="map-item map-item__schedule">
+					<div class="map-item__schedule__block">
+						<img src="img/map-clock.svg" alt="icon: clock">
+						<h5>Часы работы:</h5>
+					</div>
+					<ul>
+						<li>Пн-Пт с 9:00 до 20:00</li>
+						<li>Сб-Вс с 10:00 до 19:00</li>
+					</ul>					
+				</div>
+
+				<div class="map-item map-item__call">
+					<img src="img/map-call.svg" alt="icon: call">
+					<a href="tel:89095777758">8 (909) 577-77-58</a>					
+				</div>
+
+				<div class="map-item">
+					<div class="map-item__mail">
+						<img src="img/map-mail.svg" alt="icon: mail">	
+						<a href="mailto:gsx-r84@mail.ru">gsx-r84@mail.ru</a>
+					</div>
+					<div class="map-item__social">
+						<a href="#" target="_blank">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M19.7266 10.039C19.7266 11.3984 19.6992 12.7617 19.7344 14.1211C19.793 16.5273 18.2812 18.3867 16.3555 19.2148C15.582 19.5469 14.7695 19.7226 13.9297 19.7226C11.3008 19.7265 8.66797 19.7617 6.03906 19.7109C4.05859 19.6719 2.42969 18.8437 1.26172 17.2109C0.648437 16.3515 0.355469 15.375 0.355469 14.3164C0.355469 11.5156 0.355469 8.71873 0.355469 5.91794C0.355469 3.63279 1.46875 2.03513 3.44531 0.996069C4.30469 0.54685 5.23828 0.355444 6.21094 0.351538C8.76172 0.351538 11.3164 0.335913 13.8672 0.35935C15.8477 0.374975 17.5 1.13279 18.7187 2.72654C19.3984 3.61716 19.7266 4.6406 19.7266 5.7656C19.7266 7.18748 19.7266 8.61326 19.7266 10.039ZM1.79687 10.039C1.79687 11.4726 1.79687 12.9023 1.79687 14.3359C1.79687 14.9765 1.94531 15.5781 2.27734 16.1211C3.14844 17.5469 4.46484 18.2422 6.09766 18.2695C8.71875 18.3086 11.3437 18.2851 13.9687 18.2773C14.6133 18.2773 15.2383 18.1445 15.8203 17.8672C17.4062 17.1094 18.293 15.9023 18.2852 14.0898C18.2695 11.3164 18.2812 8.54294 18.2812 5.76951C18.2812 4.98435 18.0586 4.2656 17.5937 3.63279C16.6953 2.41794 15.4531 1.82029 13.9687 1.80466C11.3516 1.77341 8.73437 1.79294 6.11719 1.79685C5.55859 1.79685 5.01953 1.91013 4.49609 2.10544C3.05859 2.6406 1.72266 3.99607 1.78516 5.99216C1.83203 7.34373 1.79687 8.69138 1.79687 10.039Z"
+									 />
+								<path
+									d="M10.0625 14.1797C7.54297 14.1797 5.51172 12.1719 5.50782 9.67188C5.50391 7.21094 7.55079 5.19532 10.0547 5.19532C12.5664 5.19141 14.6055 7.20313 14.6094 9.6836C14.6094 12.1602 12.5742 14.1758 10.0625 14.1797ZM10.0625 12.7344C11.7774 12.7344 13.168 11.3633 13.1641 9.67579C13.1602 8.00391 11.7695 6.63672 10.0625 6.63672C8.34766 6.63672 6.94922 8.00001 6.94922 9.6836C6.95313 11.3711 8.34766 12.7383 10.0625 12.7344Z"
+									 />
+								<path
+									d="M15.1367 3.82812C15.6641 3.82812 16.0938 4.27734 16.0938 4.82812C16.0899 5.3789 15.6563 5.82422 15.1289 5.82031C14.6094 5.8164 14.1836 5.37109 14.1836 4.83203C14.1797 4.28125 14.6094 3.82812 15.1367 3.82812Z"
+									 />
+							</svg>
+						</a>
+						<a href="#" target="_blank">
+							<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M19.2333 10.2296C19.2253 15.8579 15.0115 20.4118 9.82061 20.4012C8.17271 20.3979 6.62523 19.9345 5.27947 19.124L0.0736909 20.9202L1.77788 15.4561C0.924322 13.9188 0.43403 12.1168 0.436775 10.1914C0.444799 4.56318 4.65901 0.00926046 9.84966 0.0198121C15.041 0.030365 19.2413 4.60139 19.2333 10.2296ZM9.84735 1.64276C5.49011 1.6339 1.94038 5.47021 1.93365 10.1945C1.93097 12.0692 2.48773 13.8064 3.43165 15.2207L2.43991 18.4007L5.47791 17.3522C6.7242 18.2499 8.21799 18.775 9.82313 18.7783C14.1797 18.7872 17.7301 14.9513 17.7368 10.2271C17.7436 5.5028 14.2044 1.65162 9.84735 1.64276ZM14.5777 12.5672C14.5197 12.4632 14.3665 12.4001 14.1365 12.2748C13.9061 12.1495 12.774 11.5426 12.5636 11.4592C12.3524 11.3756 12.1985 11.3334 12.0448 11.583C11.8911 11.8328 11.4487 12.3942 11.3138 12.5606C11.1791 12.7274 11.0448 12.7481 10.8144 12.6225C10.5845 12.4972 9.84268 12.2317 8.96389 11.3791C8.28011 10.7157 7.81883 9.89751 7.68475 9.64689C7.55089 9.39673 7.67126 9.26192 7.78652 9.1378C7.89048 9.02597 8.01752 8.84655 8.1328 8.70104C8.24851 8.55529 8.28695 8.45147 8.36355 8.28473C8.44101 8.11822 8.40271 7.9724 8.34503 7.84699C8.28778 7.72205 7.82837 6.49193 7.63721 5.99132C7.44605 5.49116 7.25428 5.57399 7.11963 5.57372C6.98541 5.57344 6.83165 5.55221 6.67807 5.5519C6.52449 5.55159 6.27467 5.61361 6.06309 5.86306C5.85172 6.11274 5.2559 6.7159 5.25414 7.94484C5.25239 9.17402 6.07582 10.3633 6.19108 10.5299C6.30593 10.6966 7.78037 13.304 10.1209 14.3089C12.4617 15.3134 12.4622 14.9799 12.8847 14.9389C13.3068 14.8982 14.2482 14.3375 14.4417 13.755C14.634 13.1714 14.6347 12.6714 14.5777 12.5672Z"
+									 />
+							</svg>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.map-info -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.map -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrapper">
+				<div class="footer-content">
+					<div class="footer-logo">
+						<a href="#"><img src="img/footer-logo.svg" alt="icon: logo"></a>
+					</div>
+					<!-- /.footer-logo -->
+					<div class="footer-nav">
+						<ul>
+							<li><a href="#" data-goto=".services-item__info">Услуги и цены</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<!-- /.footer-nav -->
+				</div>
+				<!-- /.footer-content -->
+				<div class="footer-description">
+					<p class="footer-description__text">Сайт носит информативный характер и не является публичной офертой. <br> опредяляемой положением п. 2 статьи 437 ГК РФ.</p>
+					<div class="footer-description__about">
+						<div>© 2021 MotoPuzzle. <span>Политика конфиденциальности</span></div>
+						<div>Сайт разработан: <span>Bit Blue Development</span></div>						
+					</div>
+					<!-- /.footer-description__about -->
+				</div>
+				<!-- /.footer-description -->
+			</div>
+			<!-- /.footer-wrapper -->
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<div class="modal">
+		<div class="modal-overlay"></div>
+		<!-- /.modal-overlay -->
+		<div class="modal-dialog">
+			<div class="modal-close">
+				<a href="#">
+					<img src="img/modal-close.svg" alt="icon: close">
+				</a>				
+			</div>
+			<!-- /.modal-close -->
+			<div class="modal-bg__layer">
+				<div class="modal-bg"></div>
+			</div>
+			<div class="modal-wrapper">
+				<div class="modal-block block-modal">
+					<div class="modal-bg__layer"><div class="modal-bg"></div></div>
+
+					<div class="block__info">
+						<h2 class="block-title">Оставьте<span class="block-title--modified">заявку</span> <br> Мы вам перезвоним!</h2>
+						<form action="#">
+							<div class="block-item block-item__user">
+								<img src="img/form-icon-username.svg" alt="icon: user">
+								<input type="text" class="block-input" name="text" placeholder="Ваше имя">
+							</div>
+							<!-- /.form-item__user -->
+							<div class="block-item block-item__phone">
+								<img src="img/form-icon-phone.svg" alt="icon: phone">
+								<input type="text" class="block-input" name="text" placeholder="Ваш телефон">
+							</div>
+							<!-- /.form-item__phone -->
+							<button type="submit" class="block-button">Оставить заявку</button>
+						</form>
+					</div>
+					<!-- /.form-block__info -->
+				</div>
+				<!-- /.form-block -->
+			</div>
+			<!-- /.form-wrapper -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
 	<script src="libs/jquery.min.js"></script>
 	<script src="libs/fancybox/fancybox.js"></script>
+	<script src="libs/aos/aos.js"></script>
 	<script src="libs/swiper/swiper-bundle.min.js"></script>
 	<script src="js/common.js"></script>
 
