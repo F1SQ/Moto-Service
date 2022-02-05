@@ -100,14 +100,12 @@ if (menuLinks.length > 0) {
   }
 }
 
-	var nav = $('.header');
- 
+var nav = $('.header'); 
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 50) {
 			nav.addClass("header_scroll");
-		}	else {
+		} else {
 			nav.removeClass("header_scroll");
-			
 		}
 	});
 
