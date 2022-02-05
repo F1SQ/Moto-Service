@@ -526,12 +526,10 @@ body {
   min-height: 383px;
   padding: 23px 16px 5px 21px;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.6s linear;
+  transition: -webkit-transform 0.6s linear;
+  transition: transform 0.6s linear;
+  transition: transform 0.6s linear, -webkit-transform 0.6s linear;
 }
 
 .services-item__info::before {
@@ -545,6 +543,10 @@ body {
   background: rgba(0, 0, 0, 0.7);
   -webkit-filter: blur(10px);
           filter: blur(10px);
+  -webkit-transition: opacity 0.4s linear, height 0.05s linear;
+  transition: opacity 0.4s linear, height 0.05s linear;
+  -webkit-transition-delay: 0s, 0.25s;
+          transition-delay: 0s, 0.25s;
 }
 
 .services-item__bg {
@@ -560,6 +562,8 @@ body {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .services-item__hidden-text {
@@ -570,8 +574,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   opacity: 0;
   -webkit-filter: blur(10px);
           filter: blur(10px);
@@ -638,10 +642,10 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  -webkit-transition: hover 0.3s ease, -webkit-transform 0.5s linear;
-  transition: hover 0.3s ease, -webkit-transform 0.5s linear;
-  transition: hover 0.3s ease, transform 0.5s linear;
-  transition: hover 0.3s ease, transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transition: hover 0.3s ease, -webkit-transform 0.6s linear;
+  transition: hover 0.3s ease, -webkit-transform 0.6s linear;
+  transition: hover 0.3s ease, transform 0.6s linear;
+  transition: hover 0.3s ease, transform 0.6s linear, -webkit-transform 0.6s linear;
 }
 
 .services-item__button:hover {
@@ -653,12 +657,22 @@ body {
           transform: rotateY(180deg);
 }
 
+.services-item__info_active::before {
+  height: 100%;
+  bottom: 0;
+}
+
 .services-item__info_active .services-item__hidden-text {
   opacity: 1;
   -webkit-filter: blur(0);
           filter: blur(0);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.services-item__info_active .services-item__bg {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
 }
 
 .services-item__info_active .services-item__name {
