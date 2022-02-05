@@ -88,7 +88,7 @@ if (menuLinks.length > 0) {
     const menuLink = e.target;
     if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header-wrapper').offsetHeight;
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
 
       window.scrollTo({
         top: gotoBlockValue,
@@ -99,15 +99,16 @@ if (menuLinks.length > 0) {
     }
   }
 }
+// let nav = document.querySelector('.header');
+//   nav.addEventListener('scroll', function () {
+//     if ($(this).scrollTop() > 50) {
+// 			nav.addClass("header_scroll");
+// 		} else {
+// 			nav.removeClass("header_scroll");
+// 		}
+//   });
 
-var nav = $('.header'); 
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 50) {
-			nav.addClass("header_scroll");
-		} else {
-			nav.removeClass("header_scroll");
-		}
-	});
+
 
  let servicesItem = document.querySelectorAll('services-item__info');
 
@@ -122,7 +123,7 @@ var nav = $('.header');
     $('.services-item__info').click(function() {
         // $(this).parent().toggleClass();
         $(this).toggleClass('services-item__info_active');
-        $(this).next().toggleClass('.services-item__button_active');
+        $(this).next().toggleClass('services-item__button_active');
         // $(this).next().next().slideToggle();
     });
 
@@ -134,6 +135,15 @@ var map = $('.main');
       $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A15c45f9ef9a4c2dd0871c440e90b7c31cd01dbee160b6112871fad9484d95027&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>');
       $(window).unbind('scroll');
     }
+    var nav = $('.header'); 
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 50) {
+			nav.addClass("header_scroll");
+		} else {
+			nav.removeClass("header_scroll");
+		}
+	});
+
   });
 
 

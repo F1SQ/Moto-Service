@@ -73,6 +73,9 @@ body {
 
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   background-color: #E9E9E9;
   -webkit-transition: all 0.3s linear;
@@ -567,18 +570,25 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 0;
   -webkit-filter: blur(10px);
           filter: blur(10px);
 }
 
 .services-item__hidden-text p {
-  padding: 70px 16px 5px 21px;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
+}
+
+.services-item__hidden-text p:first-child {
+  padding: 70px 16px 5px 21px;
+}
+
+.services-item__hidden-text p:last-child {
+  padding: 10px 16px 5px 21px;
 }
 
 .services-item__name {
@@ -593,6 +603,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
 }
 
 .services-item__icon {
@@ -626,28 +638,14 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: hover 0.3s ease, -webkit-transform 0.5s linear;
+  transition: hover 0.3s ease, -webkit-transform 0.5s linear;
+  transition: hover 0.3s ease, transform 0.5s linear;
+  transition: hover 0.3s ease, transform 0.5s linear, -webkit-transform 0.5s linear;
 }
 
 .services-item__button:hover {
   background: #d2b007;
-}
-
-.services-item--front, .services-item--back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 23px 16px 5px 21px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.services-item--back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 .services-item__info_active {
@@ -659,6 +657,18 @@ body {
   opacity: 1;
   -webkit-filter: blur(0);
           filter: blur(0);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.services-item__info_active .services-item__name {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.services-item__button_active {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 .price {
@@ -1406,12 +1416,19 @@ body {
   color: #C4C4C4;
 }
 
-.footer-description__about span {
+.footer-description__about a {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   text-align: right;
   color: #696666;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.footer-description__about a:hover {
+  color: #424040;
 }
 
 .modal {

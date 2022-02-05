@@ -27,10 +27,10 @@
 							<a href="#" data-goto=".services-item__info">Услуги и Цены</a>
 						</li>
 						<li>
-							<a href="#">Отзывы</a>
+							<a href="#" data-goto=".clients">Отзывы</a>
 						</li>
 						<li>
-							<a href="#">Контакты</a>
+							<a href="#" data-goto=".map">Контакты</a>
 						</li>
 					</ul>
 				</div>
@@ -121,41 +121,32 @@
 			<div class="services-wrapper">
 				<h2 class="services-title">Что мы делаем?</h2>
 				<div class="services-content">
+
 					<div class="services-item">
 						<div class="services-item__info">
-							<div class="services-item--front">
-								<picture>
-									<source srcset="img/services-selection.webp" class="services-item__bg" type="image/webp">
-									<img src="img/services-selection.jpg" class="services-item__bg" loading="lazy" alt="image: selection">
-								</picture>
-								<div class="services-item__name">								
-									<div class="services-item__icon">
-										<img src="img/services-puzzle.svg" alt="icon: puzzle">
-									</div>
-
-									<!-- /.services-item__icon -->
-									<h4 class="services-item__title">Мотоподбор</h4>
-								</div>
-								<!-- /.services-item__name -->
+							<picture>
+								<source srcset="img/services-selection.webp" class="services-item__bg" type="image/webp">
+								<img src="img/services-selection.jpg" class="services-item__bg" loading="lazy" alt="image: motoservice">
+							</picture>
+							<div class="services-item__hidden-text">
+								<p>У нас очень много грустных историй клиентов, которые купили мотоцикл “по обертке”, а о начинке уже узнали у нас в
+								сервисе. </p> <p> Не обладая насмотренностью и профессиональными знаниями, в настоящее время легко стать жертвой обмана. Поступи мудро: перед покупкой мотоцикла вызови нас! Мы осмотрим, пощупаем, послушаем и вынесем честный вердикт. С нами ты приобретешь
+								лучший вариант!</p>
 							</div>
-							<!-- /.services-item--front -->
-							<div class="servies-item--back">
-								<div class="services-item__hidden-text">
-									<p>У нас очень много грустных историй клиентов, которые купили мотоцикл “по обертке”, а о начинке уже узнали у нас в
-										сервисе. <br> Не обладая насмотренностью и профессиональными знаниями, в настоящее время легко стать жертвой обмана.
-										Поступи мудро:перед покупкой мотоцикла вызови нас! Мы осмотрим, пощупаем, послушаем и вынесем честный вердикт. С
-										нами ты приобретешь лучший вариант!</p>
+							<!-- /.services-item__hidden-text -->
+							<div class="services-item__name">
+								<div class="services-item__icon">
+									<img src="img/services-repair.svg" alt="icon: repair">
 								</div>
-								<!-- /.services-item__hidden-text -->
+								<!-- /.services-item__icon -->
+								<h4 class="services-item__title">Мотоподбор</h4>
 							</div>
-							<!-- /.servies-item--back -->
-
+							<!-- /.services-item__name -->
 						</div>
 						<!-- /.services-item__info -->
 						<a href="#" data-toggle="modal" class="services-item__button">Заказать</a>
 					</div>
 					<!-- /.services-item -->
-
 
 					<div class="services-item">
 						<div class="services-item__info">
@@ -166,7 +157,7 @@
 							<div class="services-item__hidden-text">
 								<p>Тем, кто ценит своё время, кому важны не только профессионализм, но и чуткое заботливое отношение к мотоциклу, мы готовы
 								предложить свои услуги по ремонту и обслуживанию японских, европейских и американских марок мотоциклов (посмотри услуги
-								и цены). <br> Наш 7-летний опыт в этой сфере позволяет нам без стеснения заявить, что мы и правда так хороши, как утверждаем.</p>
+								и цены).</p> <p> Наш 7-летний опыт в этой сфере позволяет нам без стеснения заявить, что мы и правда так хороши, как утверждаем.</p>
 							</div>
 							<!-- /.services-item__hidden-text -->
 							<div class="services-item__name">								
@@ -193,7 +184,7 @@
 							
 							<div class="services-item__hidden-text">
 								<p>Транспортировка мотоцикла требует специального оборудования и навыков, чтобы исключить повреждение техники во время
-								погрузки и перевозки. <br> Наш автобус оборудован специальной ловушкой для переднего колеса, а также большим количеством точек крепления. Возим всё, что помещается в автобус: мотоциклы, питбайки, квадроциклы и снегоходы. Можем перевезти и диван с
+								погрузки и перевозки.</p> <p> Наш автобус оборудован специальной ловушкой для переднего колеса, а также большим количеством точек крепления. Возим всё, что помещается в автобус: мотоциклы, питбайки, квадроциклы и снегоходы. Можем перевезти и диван с
 								холодильником, но за двойную цену :)</p>
 							</div>
 							<!-- /.services-item__hidden-text -->
@@ -506,8 +497,8 @@
 				<div class="footer-description">
 					<p class="footer-description__text">Сайт носит информативный характер и не является публичной офертой. <br> опредяляемой положением п. 2 статьи 437 ГК РФ.</p>
 					<div class="footer-description__about">
-						<div>© 2021 MotoPuzzle. <span>Политика конфиденциальности</span></div>
-						<div>Сайт разработан: <span>Bit Blue Development</span></div>						
+						<div>© 2021 MotoPuzzle. <a href="#" target="_blank">Политика конфиденциальности</a></div>
+						<div>Сайт разработан: <a href="#"target="_blank">Bit Blue Development</a></div>						
 					</div>
 					<!-- /.footer-description__about -->
 				</div>

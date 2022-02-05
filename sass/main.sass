@@ -45,6 +45,9 @@ body
 
 .header
 	position: fixed
+	top: 0
+	left: 0
+	right: 0
 	width: 100%
 	background-color: #E9E9E9
 	transition: all 0.3s linear
@@ -383,14 +386,18 @@ body
 			width: 100%
 			height: 100%
 			background-color: rgba(0, 0, 0, 0.4)
-			transition: all 0.4s ease-in-out
+			transition: all 0.3s ease-in-out
 			opacity: 0
 			filter: blur(10px)
 			p
-				padding: 70px 16px 5px 21px
 				font-weight: normal
 				font-size: 14px
 				line-height: 17px
+				&:first-child
+					padding: 70px 16px 5px 21px
+				&:last-child
+					padding: 10px 16px 5px 21px
+
 			// &:hover
 			// 	top: 0
 			// 	opacity: 1
@@ -401,6 +408,7 @@ body
 			align-items: center
 			justify-content: center
 			width: 100%
+			transition: all 0.7s linear
 
 		&__icon
 			width: 30px
@@ -424,30 +432,35 @@ body
 			text-transform: uppercase
 			text-decoration: none
 			color: #000
-			transition: all 0.3s ease
+			transition: hover 0.3s ease, transform 0.5s linear
 			&:hover
 				background: darken(#FAE05E, 25%)
 
-.services-item--front, .services-item--back
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	padding: 23px 16px 5px 21px
-	-webkit-backface-visibility: hidden
-	backface-visibility: hidden
+// .services-item--front, .services-item--back
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	width: 100%
+// 	height: 100%
+// 	padding: 23px 16px 5px 21px
+// 	-webkit-backface-visibility: hidden
+// 	backface-visibility: hidden
 
 .services-item--back
-	transform: rotateY(180deg)
+	// transform: rotateY(180deg)
 
 .services-item__info_active
 	transform: rotateY(180deg)
 	.services-item__hidden-text
 		opacity: 1
 		filter: blur(0)
+		transform: rotateY(180deg)
+	.services-item__bg
+		// transform: rotateY(180deg)
+	.services-item__name
+		transform: rotateY(180deg)
 .services-item__button_active
-	// background-color: #fff
+	transform: rotateY(360deg)
 
 // price ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -923,12 +936,16 @@ body
 			line-height: 17px
 			text-align: right
 			color: #C4C4C4
-			span
+			a
 				font-weight: 500
 				font-size: 14px
 				line-height: 17px
 				text-align: right
 				color: #696666
+				text-decoration: none
+				transition: all 0.3s linear
+				&:hover
+					color: darken(#696666, 15%)
 
 // modal ///////////////////////////////////////////////////////////////////////////////////////////////////
 
