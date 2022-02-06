@@ -78,7 +78,7 @@ $(function() {
 });
 
 
-const menuLinks = document.querySelectorAll('.header-nav a[data-goto]');
+const menuLinks = document.querySelectorAll('.header-nav a[data-goto], .footer-nav a[data-goto]');
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLink => {
     menuLink.addEventListener("click", onMenuLinkClick);
